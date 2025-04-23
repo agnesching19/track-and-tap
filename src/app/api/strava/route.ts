@@ -20,7 +20,6 @@ export async function POST(request: Request) {
   try {
     const { code } = await request.json();
 
-    console.log("🚀 ~ POST ~ code:", request.json())
     if (!code) {
       return NextResponse.json({ error: "Missing code parameter" }, { status: 400 });
     }
